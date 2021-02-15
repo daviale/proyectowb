@@ -105,6 +105,22 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
+# Agregar en la sección de configuración
+# Django REST frameword configuation
+REST_FRAMEWORK = {
+ # 'DEFAULT_PERMISSION_CLASSES': (
+ # 'rest_framework.permissions.IsAuthenticated',
+ # ),
+ 'DEFAULT_AUTHENTICATION_CLASSES': (
+ 'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
+ # 'rest_framework.authentication.SessionAuthentication',
+ # 'rest_framework.authentication.BasicAuthentication',
+ ),
+}
+
+
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
